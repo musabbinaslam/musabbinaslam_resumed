@@ -6,19 +6,21 @@ const experiences = [
     company: 'DevGate, Islamabad',
     period: 'Nov 2025 – Present',
     highlights: [
-      'Designed and developed a comprehensive corporate website for a legal/audit firm using React.js and Node.js/Express',
-      'Engineered a real-time WebRTC video communication platform with peer-to-peer calling and Socket.io signaling',
-      'Collaborated on scalable MongoDB database schemas and secure authentication flows',
+      'Nasir Absar & Co Website: Designed and developed a comprehensive corporate website for a legal/audit firm. Utilized React.js for a responsive frontend and Node.js/Express for backend services, ensuring high performance and SEO optimization.',
+      'DaftarPro (SaaS Platform): Designed and improved LLM-driven automation features, integrating AI components into existing backend services. Implemented prompt engineering, guardrails, and bug fixes to increase output accuracy, system stability, and scalability in a live SaaS environment.',
+      'SMEDA (Enterprise Application): Engineered and improved backend functionalities, resolving production issues, optimizing data workflows, and supporting scalable system operations for a government-level platform.',
+      'WebRTC Video Calling App: Engineered a real-time video communication platform featuring peer-to-peer video/audio calling. Integrated WebRTC for media streams and Socket.io for signalling and real-time chat functionality, significantly reducing latency.',
+      'Collaborated with the backend team to design scalable database schemas in MongoDB and implement secure authentication flows.',
     ],
   },
   {
-    title: 'Frontend / Mobile Developer Intern',
+    title: 'Frontend / Mobile Developer (Intern)',
     company: 'Centangle Interactive, Remote',
     period: 'Jun 2024 – Aug 2024',
     highlights: [
-      'Developed and optimized mobile and web components using React Native and React.js',
-      'Implemented responsive UI elements and reusable components for improved scalability',
-      'Collaborated with cross-functional teams to enhance product performance and UX',
+      'Developed and optimized mobile and web components using React Native and React.js.',
+      'Implemented responsive UI elements and reusable components to improve app scalability and maintainability.',
+      'Collaborated with cross-functional teams to enhance product performance and user experience.',
     ],
   },
   {
@@ -26,9 +28,11 @@ const experiences = [
     company: 'Self-Employed, Islamabad',
     period: 'Jan 2023 – Present',
     highlights: [
-      'Developing Clean Flow POS: offline desktop POS with double-entry bookkeeping and automated reporting',
-      'Created a School Management App using React and Firebase for real-time data handling',
-      'Built a Blockchain Certificate Verifier using Solidity and React for document authenticity',
+      'Clean Flow POS (Current): Developing a standalone, offline desktop POS system for service businesses. Features include double-entry bookkeeping, customer/job management, and automated financial reporting, optimized for environments with limited internet connectivity.',
+      'Delivered multiple client projects including mobile apps, automation tools, and blockchain demos.',
+      'Created a School Management App using React and Firebase for real-time data handling.',
+      'Developed a Blockchain Certificate Verifier using Solidity and React to ensure document authenticity.',
+      'Built Python-based data parsing and requirement extraction tools to streamline client workflows.',
     ],
   },
 ];

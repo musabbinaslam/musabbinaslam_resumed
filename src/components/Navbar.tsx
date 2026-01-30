@@ -7,6 +7,7 @@ const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
+  { name: 'Education', href: '#education' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -23,10 +24,9 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/80 backdrop-blur-lg border-b border-border' : ''
-      }`}
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-lg border-b border-border' : ''
+        }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
@@ -39,7 +39,7 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a 
+            <a
               key={link.name}
               href={link.href}
               className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm"
@@ -47,8 +47,8 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             size="sm"
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
@@ -58,7 +58,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden p-2"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
@@ -71,7 +71,7 @@ const Navbar = () => {
         <div className="md:hidden bg-background/95 backdrop-blur-lg border-b border-border">
           <div className="px-6 py-4 flex flex-col gap-4">
             {navLinks.map((link) => (
-              <a 
+              <a
                 key={link.name}
                 href={link.href}
                 className="text-muted-foreground hover:text-foreground transition-colors duration-200 py-2"

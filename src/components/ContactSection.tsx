@@ -4,7 +4,7 @@ const socialLinks = [
   {
     name: 'GitHub',
     icon: Github,
-    href: 'https://github.com',
+    href: 'https://github.com', // User provided github is general in resume, but usually it's there. Resume says 'GitHub'. I'll keep generic if not specified, but check if user provided it elsewhere. Resume: 'github.com/in/musab-bin-aslam-a12915271' wait that's linked in. Resume has 'github.com' listed under tools? No, wait. 'linkedin.com/in/...' and 'musabbinaslam.vercel.app'. It does not explicitly list github url other than 'GitHub' under tools. I will keep generic github or leave it empty/placeholder.
     color: 'hover:text-foreground',
   },
   {
@@ -12,12 +12,6 @@ const socialLinks = [
     icon: Linkedin,
     href: 'https://linkedin.com/in/musab-bin-aslam-a12915271',
     color: 'hover:text-[hsl(201,100%,50%)]',
-  },
-  {
-    name: 'Twitter',
-    icon: Twitter,
-    href: 'https://twitter.com',
-    color: 'hover:text-[hsl(203,89%,53%)]',
   },
   {
     name: 'Email',
@@ -32,14 +26,14 @@ const ContactSection = () => {
     <section id="contact" className="py-24 px-6 relative">
       {/* Background Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-gradient-to-t from-primary/10 via-accent/5 to-transparent blur-3xl" />
-      
+
       <div className="max-w-4xl mx-auto relative z-10 text-center">
         <p className="text-primary font-mono text-sm mb-4">// get in touch</p>
         <h2 className="text-3xl md:text-5xl font-bold mb-6">
           Let's <span className="text-gradient">Connect</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto text-lg mb-12">
-          I'm always open to discussing new opportunities, collaborations, 
+          I'm always open to discussing new opportunities, collaborations,
           or just having a chat about tech and development.
         </p>
 
@@ -61,7 +55,7 @@ const ContactSection = () => {
         </div>
 
         {/* Email CTA */}
-        <a 
+        <a
           href="mailto:musabbinaslam6@gmail.com"
           className="inline-flex items-center gap-2 text-lg font-mono text-primary hover:underline underline-offset-4"
         >

@@ -1,11 +1,11 @@
-import { ExternalLink, Blocks, Gamepad2, LayoutDashboard, Brain } from 'lucide-react';
+import { Blocks, Gamepad2, LayoutDashboard, Brain } from 'lucide-react';
 
 const projects = [
   {
     icon: Brain,
     title: 'URAME-SDLC Automation Platform',
     year: '2024',
-    description: 'NLP-powered platform that converts natural language case studies into structured software requirements using SpaCy and Python. Streamlines the initial phase of SDLC by automating requirement extraction.',
+    description: 'Developed an NLP-powered platform that converts natural language case studies into structured software requirements using SpaCy and Python. Streamlined the initial phase of the SDLC by automating requirement extraction.',
     tags: ['Python', 'SpaCy', 'NLP', 'Automation'],
   },
   {
@@ -17,17 +17,10 @@ const projects = [
   },
   {
     icon: LayoutDashboard,
-    title: 'CleanFlow POS System',
-    year: '2026',
-    description: 'Offline desktop Point of Sale system for small businesses featuring customer management, job tracking, payment processing, expense management, and double-entry bookkeeping with role-based access control.',
-    tags: ['Desktop App', 'POS', 'Offline-First', 'Windows'],
-  },
-  {
-    icon: Blocks,
-    title: 'Blockchain Certificate Verifier',
+    title: 'Wedding Planning App',
     year: '2023',
-    description: 'Built using Solidity and React to ensure document authenticity through blockchain verification, preventing fraudulent certificates.',
-    tags: ['React', 'Solidity', 'Smart Contracts'],
+    description: 'Built a comprehensive React Native app for managing event timelines, guest lists, and budgeting, featuring a user-friendly mobile interface.',
+    tags: ['React Native', 'Mobile App', 'Event Management'],
   },
 ];
 

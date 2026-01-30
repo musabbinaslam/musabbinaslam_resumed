@@ -29,16 +29,16 @@ const HeroSection = () => {
           <p className="text-primary font-mono text-sm md:text-base mb-4 tracking-wider">&lt;hello world /&gt;</p>
 
           <p className="text-muted-foreground max-w-2xl mx-auto mb-10 text-base md:text-lg">
-            Crafting clean, modern web experiences with a passion for frontend development and user-centric design.
+            Software Engineer | MERN Stack Developer | React Native | Blockchain Integration
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pointer-events-auto">
             <Button
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90 glow-primary transition-all duration-300"
-              onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
             >
-              Explore More
+              View Work
               <ArrowDown className="ml-2 w-4 h-4" />
             </Button>
 
@@ -52,7 +52,7 @@ const HeroSection = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/musab-bin-aslam-a12915271"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full border border-border bg-background/80 backdrop-blur-sm hover:border-primary hover:text-primary transition-all duration-300"
@@ -60,7 +60,7 @@ const HeroSection = () => {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="mailto:musab@example.com"
+                href="mailto:musabbinaslam6@gmail.com"
                 className="p-3 rounded-full border border-border bg-background/80 backdrop-blur-sm hover:border-primary hover:text-primary transition-all duration-300"
               >
                 <Mail className="w-5 h-5" />
