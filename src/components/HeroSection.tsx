@@ -1,6 +1,7 @@
 import { Suspense, lazy } from "react";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const Spline = lazy(() => import("@splinetool/react-spline"));
 
@@ -25,14 +26,35 @@ const HeroSection = () => {
 
       {/* Content - positioned at bottom to not block Spline interaction */}
       <div className="absolute bottom-0 left-0 right-0 z-30 text-center px-6 pb-24 max-w-4xl mx-auto pointer-events-none">
-        <div className="animate-fade-in">
-          <p className="text-primary font-mono text-sm md:text-base mb-4 tracking-wider">&lt;hello world /&gt;</p>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.p
+            className="text-primary font-mono text-sm md:text-base mb-4 tracking-wider"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+          >
+            &lt;hello world /&gt;
+          </motion.p>
 
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-10 text-base md:text-lg">
-            Software Engineer | MERN Stack Developer | React Native | Blockchain Integration
-          </p>
+          <motion.p
+            className="text-muted-foreground max-w-2xl mx-auto mb-10 text-base md:text-lg"
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35, duration: 0.6 }}
+          >
+            Software Engineer · MERN Stack Developer · n8n Automation · React Native · Blockchain
+          </motion.p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pointer-events-auto">
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center pointer-events-auto"
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+          >
             <Button
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90 glow-primary transition-all duration-300"
@@ -43,37 +65,51 @@ const HeroSection = () => {
             </Button>
 
             <div className="flex gap-4">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-full border border-border bg-background/80 backdrop-blur-sm hover:border-primary hover:text-primary transition-all duration-300"
-              >
-                <Github className="w-5 h-5" />
-              </a>
-              <a
-                href="https://linkedin.com/in/musab-bin-aslam-a12915271"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-full border border-border bg-background/80 backdrop-blur-sm hover:border-primary hover:text-primary transition-all duration-300"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="mailto:musabbinaslam6@gmail.com"
-                className="p-3 rounded-full border border-border bg-background/80 backdrop-blur-sm hover:border-primary hover:text-primary transition-all duration-300"
-              >
-                <Mail className="w-5 h-5" />
-              </a>
+              {[
+                {
+                  href: "https://github.com",
+                  icon: <Github className="w-5 h-5" />,
+                  label: "GitHub",
+                },
+                {
+                  href: "https://linkedin.com/in/musab-bin-aslam-a12915271",
+                  icon: <Linkedin className="w-5 h-5" />,
+                  label: "LinkedIn",
+                },
+                {
+                  href: "mailto:musabbinaslam6@gmail.com",
+                  icon: <Mail className="w-5 h-5" />,
+                  label: "Email",
+                },
+              ].map(({ href, icon, label }, i) => (
+                <motion.a
+                  key={label}
+                  href={href}
+                  target={label !== "Email" ? "_blank" : undefined}
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full border border-border bg-background/80 backdrop-blur-sm hover:border-primary hover:text-primary transition-all duration-300"
+                  initial={{ opacity: 0, scale: 0.7 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.6 + i * 0.1, type: "spring", stiffness: 200 }}
+                  whileHover={{ scale: 1.15 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {icon}
+                </motion.a>
+              ))}
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+      <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
+        animate={{ y: [0, 8, 0] }}
+        transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
+      >
         <ArrowDown className="w-6 h-6 text-muted-foreground" />
-      </div>
+      </motion.div>
     </section>
   );
 };
