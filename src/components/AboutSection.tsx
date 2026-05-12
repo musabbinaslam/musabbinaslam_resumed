@@ -4,14 +4,14 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 const skills = [
-  { name: 'React.js', level: 90 },
-  { name: 'React Native', level: 85 },
+  { name: 'React.js & Next.js', level: 90 },
   { name: 'Node.js / Express', level: 85 },
-  { name: 'MongoDB / MySQL', level: 80 },
-  { name: 'n8n Automation', level: 80 },
+  { name: 'AI / LLMs (Claude, GPT-4)', level: 85 },
+  { name: 'React Native', level: 80 },
+  { name: 'MongoDB / Pinecone', level: 80 },
   { name: 'Solidity / Web3', level: 75 },
-  { name: 'WebRTC / Socket.io', level: 70 },
-  { name: 'Python / NLP', level: 65 },
+  { name: 'WebRTC / Socket.io', level: 75 },
+  { name: 'TypeScript', level: 70 },
 ];
 
 const highlights = [
@@ -32,17 +32,19 @@ const highlights = [
   },
   {
     icon: Zap,
-    title: 'n8n Automation',
-    description: 'End-to-end workflow automation — email pipelines, CRM sync, API integrations.',
+    title: 'AI-Driven Dev',
+    description: 'Integrating LLMs (Claude, GPT-4) and AI-assisted workflows into production apps.',
   },
 ];
 
-const containerVariants = {
+import { Variants } from 'framer-motion';
+
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.12 } },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: 'easeOut' } },
 };
@@ -71,7 +73,7 @@ const AboutSection = () => {
             Passionate About <span className="text-gradient">Excellence</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Motivated Software Engineer with hands-on experience in the MERN Stack, React Native, blockchain integration, and n8n workflow automation. Passionate about crafting responsive, user-focused applications and engineering smart automation pipelines. Proven track record of building real-time communication tools, corporate web solutions, and scalable automation systems. Known for writing clean, maintainable code and collaborating effectively within agile development teams.
+            AI-powered MERN Stack Developer with proven experience delivering production-grade platforms across SaaS, enterprise, and startup environments. Currently contributing to high-impact projects at Amplify Media Technologies and Hardwell Capital. Built CallsFlow.io — a calling platform generating $100K+ per quarter — from the ground up. Skilled in integrating LLMs, real-time communication (WebRTC), and AI-assisted development workflows to ship faster and cleaner.
           </p>
         </motion.div>
 

@@ -30,6 +30,16 @@ const certifications = [
         issuer: 'Google',
         year: '2024',
     },
+    {
+        name: 'Advanced Prompt Engineering',
+        issuer: 'OpenAI, Anthropic Docs',
+        year: '2024',
+    },
+    {
+        name: 'AI-Assisted Development',
+        issuer: 'Cursor, GitHub Copilot',
+        year: '2024',
+    },
 ];
 
 const EducationSection = () => {

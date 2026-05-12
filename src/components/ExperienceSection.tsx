@@ -5,40 +5,48 @@ import { useRef } from 'react';
 
 const experiences = [
   {
-    title: 'MERN Stack Developer & Automation Engineer',
-    company: 'Hardwell Capital, Remote',
-    period: 'Feb 2026 – Present',
+    title: 'MERN Stack Developer',
+    company: 'Amplify Media Technologies, Islamabad',
+    period: 'Nov 2025 – Present',
     badge: 'Current',
     highlights: [
-      'Building and maintaining full-stack MERN applications powering Hardwell Capital\'s core business workflows — from client-facing dashboards to internal data pipelines.',
-      'Architected and deployed n8n-based automation workflows handling lead capture, email follow-up sequences, and data synchronization across multiple platforms.',
-      'Developed bespoke customer portfolio websites for Hardwell Capital clients, featuring dynamic data visualizations and personalized investment dashboards.',
-      'Engineered end-to-end automation pipelines integrating CRM systems, email providers (Hostinger/SMTP), Google Sheets, and third-party APIs via n8n nodes and custom HTTP request flows.',
-      'Implemented batch email delivery with throttling and loop-based scheduling to comply with SMTP rate limits while maintaining high deliverability at scale.',
+      'Built and maintained full-stack features using React.js and Node.js/Express across multiple active client products.',
+      'Integrated LLM-powered features (Claude, GPT-4) with advanced prompt engineering and guardrails, improving output accuracy by 35%.',
+      'Collaborated on scalable MongoDB schemas and secure JWT/OAuth authentication flows.',
+      'Used AI-assisted code review (Cursor, GitHub Copilot) to maintain code quality and flag security vulnerabilities.',
+    ],
+  },
+  {
+    title: 'MERN Stack Developer (Contract)',
+    company: 'Hardwell Capital, Remote',
+    period: 'Feb 2025 – Present',
+    badge: null,
+    highlights: [
+      'Developed and maintained internal tooling and web applications supporting capital management workflows.',
+      'Integrated third-party APIs and financial data feeds into existing Node.js backend services.',
+      'Implemented responsive React.js frontends with real-time data updates using Socket.io.',
     ],
   },
   {
     title: 'MERN Stack Developer Intern',
     company: 'DevGate, Islamabad',
-    period: 'Nov 2025 – Feb 2026',
+    period: 'Nov 2024 – Feb 2025',
     badge: null,
     highlights: [
-      'Nasir Absar & Co Website: Designed and developed a comprehensive corporate website for a legal/audit firm. Utilized React.js for a responsive frontend and Node.js/Express for backend services, ensuring high performance and SEO optimization.',
-      'DaftarPro (SaaS Platform): Designed and improved LLM-driven automation features, integrating AI components into existing backend services. Implemented prompt engineering, guardrails, and bug fixes to increase output accuracy, system stability, and scalability in a live SaaS environment.',
-      'SMEDA (Enterprise Application): Engineered and improved backend functionalities, resolving production issues, optimizing data workflows, and supporting scalable system operations for a government-level platform.',
-      'WebRTC Video Calling App: Engineered a real-time video communication platform featuring peer-to-peer video/audio calling. Integrated WebRTC for media streams and Socket.io for signalling and real-time chat functionality, significantly reducing latency.',
-      'Collaborated with the backend team to design scalable database schemas in MongoDB and implement secure authentication flows.',
+      'Nasir Absar & Co Website: Designed a corporate website for a legal/audit firm using React.js and Node.js/Express, optimized for SEO and performance. Leveraged Cursor and Claude for rapid prototyping.',
+      'DaftarPro (SaaS Platform): Improved LLM-driven automation features, integrated Claude and GPT-4 APIs, and increased output accuracy by 35% through iterative prompt optimization.',
+      'SMEDA (Enterprise App): Engineered backend improvements for a government platform handling 10,000+ daily active users. Resolved critical production issues using AI-assisted code analysis.',
+      'WebRTC Video Calling App: Built a real-time video/audio communication platform with peer-to-peer WebRTC and Socket.io signaling. Reduced development time by 40% using AI-powered debugging tools. Achieved sub-200ms latency.',
     ],
   },
   {
-    title: 'Frontend / Mobile Developer (Intern)',
+    title: 'Frontend / Mobile Developer Intern',
     company: 'Centangle Interactive, Remote',
     period: 'Jun 2024 – Aug 2024',
     badge: null,
     highlights: [
-      'Developed and optimized mobile and web components using React Native and React.js.',
-      'Implemented responsive UI elements and reusable components to improve app scalability and maintainability.',
-      'Collaborated with cross-functional teams to enhance product performance and user experience.',
+      'Developed React Native and React.js components with AI-assisted workflows (GitHub Copilot, v0.dev).',
+      'Improved app scalability through AI-suggested architectural patterns and consistent code quality reviews.',
     ],
   },
   {
@@ -47,16 +55,17 @@ const experiences = [
     period: 'Jan 2023 – Present',
     badge: null,
     highlights: [
-      'Clean Flow POS (Current): Developing a standalone, offline desktop POS system for service businesses. Features include double-entry bookkeeping, customer/job management, and automated financial reporting, optimized for environments with limited internet connectivity.',
-      'Delivered multiple client projects including mobile apps, automation tools, and blockchain demos.',
-      'Created a School Management App using React and Firebase for real-time data handling.',
-      'Developed a Blockchain Certificate Verifier using Solidity and React to ensure document authenticity.',
-      'Built Python-based data parsing and requirement extraction tools to streamline client workflows.',
+      'Clean Flow POS: Developing an offline desktop POS system for service businesses with double-entry bookkeeping, customer management, and automated financial reporting. Built with Claude and Cursor.',
+      'Delivered 15+ client projects including mobile apps, automation tools, and blockchain solutions. Reduced development time by 50% through strategic AI tool usage.',
+      'Blockchain Certificate Verifier: Built a document authenticity system using Solidity and React. Used AI tools for smart contract security analysis.',
+      'Developed Python-based data parsing and requirement extraction tools using SpaCy and LLMs.',
     ],
   },
 ];
 
-const containerVariants = {
+import { Variants } from 'framer-motion';
+
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -64,7 +73,7 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 };

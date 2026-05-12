@@ -46,7 +46,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.6 }}
           >
-            Software Engineer · MERN Stack Developer · n8n Automation · React Native · Blockchain
+            Software Engineer · MERN Stack Developer · AI-Driven Development · React Native
           </motion.p>
 
           <motion.div
